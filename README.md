@@ -1,13 +1,12 @@
-
 # PHP Test #
 
 
 ### Requirements ###
 
-PHP 5.3 or newer
-MySQL 5.0.3 or newer
-php pdo
-php curl
+* PHP 5.3 or newer
+* MySQL 5.0.3 or newer
+* php pdo
+* php curl
 
 ### Guidelines ###
 
