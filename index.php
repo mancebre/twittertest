@@ -16,3 +16,4 @@ use controllers\Controller;
 
 $controller = new Controller();
 $controller->handleRequest();
+

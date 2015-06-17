@@ -4,6 +4,7 @@ namespace models;
 
 /**
  * Class DB
+ * 
  * @package models
  * @author Djordje Mancovic <dj.mancovic@gmail.com>
  */

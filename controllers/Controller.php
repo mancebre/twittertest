@@ -37,16 +37,17 @@ class Controller {
      *
      */
     public function homePage () {
-        date_default_timezone_set("UTC");
         $tweetsRaw = $this->model->getTweets();
         $tweets = array();
         $now = date("Y-m-d H:i:s", time());
 
-        foreach ($tweetsRaw as $tweet) {
-            $tweet['created'] = $this->getDateDiff($tweet['created'], $now, 1) . " ago";
-            $tweet['profileImageUrl'] = empty($tweet['profileImageUrl']) ? "css/images/default.png" : urldecode($tweet['profileImageUrl']);
+        if ($tweetsRaw) {
+            foreach ($tweetsRaw as $tweet) {
+                $tweet['created'] = $this->getDateDiff($tweet['created'], $now, 1) . " ago";
+                $tweet['profileImageUrl'] = empty($tweet['profileImageUrl']) ? "css/images/default.png" : urldecode($tweet['profileImageUrl']);
 
-            $tweets[] = $tweet;
+                $tweets[] = $tweet;
+            }
         }
 
 
